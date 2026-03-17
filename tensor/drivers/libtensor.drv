@@ -1,0 +1,3 @@
+module libtensor.CTensor
+    syntax type ctensor "struct ctensor"
+end

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"https://www.why3.org/why3session.dtd">
+<why3session shape_version="6">
+<prover id="0" name="Alt-Ergo" version="2.6.2" timelimit="1" steplimit="0" memlimit="1000"/>
+<prover id="1" name="CVC5" version="1.2.1" timelimit="1" steplimit="0" memlimit="1000"/>
+<prover id="2" name="Z3" version="4.13.4" timelimit="1" steplimit="0" memlimit="1000"/>
+<file format="whyml" proved="true">
+<path name=".."/><path name="layout.mlw"/>
+<theory name="CFlat" proved="true">
+ <goal name="offset_size&#39;vc" expl="VC for offset_size" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="offset_size&#39;vc.0" expl="variant decrease" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_size&#39;vc.0.0" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.003698" steps="3035"/></proof>
+   </goal>
+   <goal name="offset_size&#39;vc.0.1" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.005658" steps="8045"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="offset_size&#39;vc.1" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.010290" steps="23872"/></proof>
+  </goal>
+  <goal name="offset_size&#39;vc.2" expl="assertion" proved="true">
+  <proof prover="2"><result status="valid" time="0.004798" steps="25425"/></proof>
+  </goal>
+  <goal name="offset_size&#39;vc.3" expl="assertion" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_size&#39;vc.3.0" expl="assertion" proved="true">
+   <proof prover="2"><result status="valid" time="0.009291" steps="24936"/></proof>
+   </goal>
+   <goal name="offset_size&#39;vc.3.1" expl="assertion" proved="true">
+   <proof prover="2"><result status="valid" time="0.003894" steps="7682"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="offset_size&#39;vc.4" expl="postcondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_size&#39;vc.4.0" expl="postcondition" proved="true">
+   <transf name="split_vc" proved="true" >
+    <goal name="offset_size&#39;vc.4.0.0" expl="postcondition" proved="true">
+    <transf name="split_vc" proved="true" >
+     <goal name="offset_size&#39;vc.4.0.0.0" expl="postcondition" proved="true">
+     <proof prover="1"><result status="valid" time="0.047785" steps="6605"/></proof>
+     </goal>
+    </transf>
+    </goal>
+    <goal name="offset_size&#39;vc.4.0.1" expl="postcondition" proved="true">
+    <proof prover="1"><result status="valid" time="0.035676" steps="5565"/></proof>
+    </goal>
+    <goal name="offset_size&#39;vc.4.0.2" expl="postcondition" proved="true">
+    <proof prover="1"><result status="valid" time="0.043632" steps="5442"/></proof>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="offset_size&#39;vc.4.1" expl="postcondition" proved="true">
+   <transf name="split_vc" proved="true" >
+    <goal name="offset_size&#39;vc.4.1.0" expl="postcondition" proved="true">
+    <transf name="split_vc" proved="true" >
+     <goal name="offset_size&#39;vc.4.1.0.0" expl="postcondition" proved="true">
+     <proof prover="1"><result status="valid" time="0.052756" steps="5981"/></proof>
+     </goal>
+    </transf>
+    </goal>
+    <goal name="offset_size&#39;vc.4.1.1" expl="postcondition" proved="true">
+    <proof prover="1"><result status="valid" time="0.034420" steps="5626"/></proof>
+    </goal>
+    <goal name="offset_size&#39;vc.4.1.2" expl="postcondition" proved="true">
+    <proof prover="1"><result status="valid" time="0.044470" steps="5485"/></proof>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="index_range&#39;vc" expl="VC for index_range" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="index_range&#39;vc.0" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.008608" steps="25171"/></proof>
+  </goal>
+  <goal name="index_range&#39;vc.1" expl="variant decrease" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_range&#39;vc.1.0" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.008361" steps="3254"/></proof>
+   </goal>
+   <goal name="index_range&#39;vc.1.1" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.003706" steps="8555"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="index_range&#39;vc.2" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.007169" steps="25109"/></proof>
+  </goal>
+  <goal name="index_range&#39;vc.3" expl="precondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_range&#39;vc.3.0" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.016903" steps="32570"/></proof>
+   </goal>
+   <goal name="index_range&#39;vc.3.1" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.012098" steps="36005"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="index_range&#39;vc.4" expl="postcondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_range&#39;vc.4.0" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.036280" steps="6384"/></proof>
+   </goal>
+   <goal name="index_range&#39;vc.4.1" expl="postcondition" proved="true">
+   <proof prover="0"><result status="valid" time="0.030136" steps="2240"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="index_of_offset&#39;vc" expl="VC for index_of_offset" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="index_of_offset&#39;vc.0" expl="variant decrease" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_of_offset&#39;vc.0.0" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.004743" steps="4312"/></proof>
+   </goal>
+   <goal name="index_of_offset&#39;vc.0.1" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.007993" steps="11400"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="index_of_offset&#39;vc.1" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.007437" steps="33758"/></proof>
+  </goal>
+  <goal name="index_of_offset&#39;vc.2" expl="precondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_of_offset&#39;vc.2.0" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.015033" steps="34050"/></proof>
+   </goal>
+   <goal name="index_of_offset&#39;vc.2.1" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.007409" steps="34030"/></proof>
+   </goal>
+   <goal name="index_of_offset&#39;vc.2.2" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.012182" steps="34106"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="index_of_offset&#39;vc.3" expl="precondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_of_offset&#39;vc.3.0" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.013945" steps="34555"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="index_of_offset&#39;vc.4" expl="postcondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="index_of_offset&#39;vc.4.0" expl="postcondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.011244" steps="36425"/></proof>
+   </goal>
+   <goal name="index_of_offset&#39;vc.4.1" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.035899" steps="6873"/></proof>
+   </goal>
+   <goal name="index_of_offset&#39;vc.4.2" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.022712" steps="6344"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="offset_of_index&#39;vc" expl="VC for offset_of_index" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="offset_of_index&#39;vc.0" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.011036" steps="33771"/></proof>
+  </goal>
+  <goal name="offset_of_index&#39;vc.1" expl="variant decrease" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_of_index&#39;vc.1.0" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.007233" steps="4364"/></proof>
+   </goal>
+   <goal name="offset_of_index&#39;vc.1.1" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.003773" steps="11557"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="offset_of_index&#39;vc.2" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.007854" steps="33706"/></proof>
+  </goal>
+  <goal name="offset_of_index&#39;vc.3" expl="precondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_of_index&#39;vc.3.0" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.013119" steps="34084"/></proof>
+   </goal>
+   <goal name="offset_of_index&#39;vc.3.1" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.012393" steps="43749"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="offset_of_index&#39;vc.4" expl="postcondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_of_index&#39;vc.4.0" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.019436" steps="6841"/></proof>
+   </goal>
+   <goal name="offset_of_index&#39;vc.4.1" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.030759" steps="11170"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="offset_push&#39;vc" expl="VC for offset_push" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="offset_push&#39;vc.0" expl="variant decrease" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_push&#39;vc.0.0" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.003142" steps="4426"/></proof>
+   </goal>
+   <goal name="offset_push&#39;vc.0.1" expl="variant decrease" proved="true">
+   <proof prover="2"><result status="valid" time="0.009380" steps="11730"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="offset_push&#39;vc.1" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.007188" steps="34726"/></proof>
+  </goal>
+  <goal name="offset_push&#39;vc.2" expl="postcondition" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="offset_push&#39;vc.2.0" expl="postcondition" proved="true">
+   <proof prover="0"><result status="valid" time="0.881586" steps="119355"/></proof>
+   </goal>
+   <goal name="offset_push&#39;vc.2.1" expl="postcondition" proved="true">
+   <proof prover="1"><result status="valid" time="0.021383" steps="7174"/></proof>
+   </goal>
+   <goal name="offset_push&#39;vc.2.2" expl="postcondition" proved="true">
+   <proof prover="0"><result status="valid" time="0.028668" steps="1534"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="offset_injective&#39;vc" expl="VC for offset_injective" proved="true">
+ <proof prover="0" obsolete="true"><result status="valid" time="0.809876" steps="106478"/></proof>
+ <proof prover="1"><result status="valid" time="0.019484" steps="8089"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>
