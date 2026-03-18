@@ -120,12 +120,13 @@ module CTensor
 end
 
 
-module CTensorInt32
+module CTensorInt64
   use std.Int
   use std.List
   use std.Clib
   use std.Cfloat
   use mach.int.Int32
+  use mach.int.Int64
   use tensor.Range
   use tensor.Tensor
   use layout.CFlat
@@ -133,39 +134,39 @@ module CTensorInt32
   
   (** C Tensor **)
 
-  type ctensorint32 = {
+  type ctensorint64 = {
     t_rank : int32 ;
     t_dims : iarray ;
-    t_data : iarray ; 
+    t_data : ptr int64 ; 
   }
 
   (** Dimension List **)
-  function tensor_dim (t : ctensorint32) : list int = ivector t.t_dims t.t_rank
+  function tensor_dim (t : ctensorint64) : list int = ivector t.t_dims t.t_rank
   (** Number of entries **)
-  function tensor_size (t : ctensorint32) : int = vdim t.t_dims t.t_rank
+  function tensor_size (t : ctensorint64) : int = vdim t.t_dims t.t_rank
   (** Valid index predicate **)
-  predicate valid_index (k : list int) (t : ctensorint32) = valid k (tensor_dim t)
+  predicate valid_index (k : list int) (t : ctensorint64) = valid k (tensor_dim t)
   (** Empty tensor predicate **)
-  predicate empty_tensor (t : ctensorint32) = t.t_rank = 0
+  predicate empty_tensor (t : ctensorint64) = t.t_rank = 0
 
   (** Valid tensor  **)
-  predicate valid_tensor (t : ctensorint32) =
+  predicate valid_tensor (t : ctensorint64) =
     dimension t.t_dims t.t_rank /\
     valid_range t.t_data 0 (tensor_size t) /\
     writable t.t_data
 
   (*Coordinate Index for ctensor*)
-  function tensor_offset (k : list int) (t : ctensorint32) : int = offset k (tensor_dim t)
+  function tensor_offset (k : list int) (t : ctensorint64) : int = offset k (tensor_dim t)
 
-  function tensor_value_at (k : list int) (t : ctensorint32) : int =
+  function tensor_value_at (k : list int) (t : ctensorint64) : int =
     if valid_index k t then
       value_at t.t_data (tensor_offset k t)
     else 0
 
-  function tensor_value (t : ctensorint32) : list int -> int =
+  function tensor_value (t : ctensorint64) : list int -> int =
     fun k -> tensor_value_at k t
 
-  let ghost function tensor (t : ctensorint32) : tensor int
+  let ghost function tensor (t : ctensorint64) : tensor int
     (*proof*)
     requires { valid_tensor t }
     ensures { result.dims = tensor_dim t }
@@ -178,7 +179,7 @@ module CTensorInt32
       background = 0 ;
     }
 
-  let ctensorint32_create (ds : iarray) (n : int32) : ctensorint32 =
+  let ctensorint64_create (ds : iarray) (n : int32) : ctensorint64 =
     (*proof*)
     requires { dimension ds n }
     ensures { empty_tensor result \/ valid_tensor result }
@@ -193,7 +194,7 @@ module CTensorInt32
       t_data = vs ;
     }
 
-  let ctensorint32_clear (r : ctensorint32) =
+  let ctensorint64_clear (r : ctensorint64) =
     requires { valid_tensor r }
     ensures { tensor r = Tensor.zero 0 (tensor_dim r) }
     let m = cdim_size r.t_dims r.t_rank in
@@ -207,7 +208,7 @@ module CTensorInt32
     ; assert { tensor r == Tensor.zero 0 (tensor_dim r) }
     (*qed*)
 
-  let ctensorint32_reset (r : ctensorint32) (v : int32) =
+  let ctensorint64_reset (r : ctensorint64) (v : int64) =
     requires { valid_tensor r }
     ensures { tensor r = Tensor.const (to_int v) 0 (tensor_dim r) }
     let m = cdim_size r.t_dims r.t_rank in

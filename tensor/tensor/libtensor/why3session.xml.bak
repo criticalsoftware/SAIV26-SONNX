@@ -25,48 +25,48 @@
  <proof prover="0"><result status="valid" time="0.275778" steps="2699"/></proof>
  </goal>
 </theory>
-<theory name="CTensorInt32" proved="true">
+<theory name="CTensorInt64" proved="true">
  <goal name="tensor&#39;vc" expl="VC for tensor" proved="true">
- <proof prover="2"><result status="valid" time="0.082892" steps="206523"/></proof>
+ <proof prover="2"><result status="valid" time="0.043477" steps="211621"/></proof>
  </goal>
- <goal name="ctensorint32_create&#39;vc" expl="VC for ctensorint32_create" proved="true">
- <proof prover="1"><result status="valid" time="0.079468" steps="18569"/></proof>
+ <goal name="ctensorint64_create&#39;vc" expl="VC for ctensorint64_create" proved="true">
+ <proof prover="1"><result status="valid" time="0.057479" steps="18677"/></proof>
  </goal>
- <goal name="ctensorint32_clear&#39;vc" expl="VC for ctensorint32_clear" proved="true">
- <proof prover="0"><result status="valid" time="0.178572" steps="1579"/></proof>
+ <goal name="ctensorint64_clear&#39;vc" expl="VC for ctensorint64_clear" proved="true">
+ <proof prover="0"><result status="valid" time="0.091784" steps="1245"/></proof>
  </goal>
- <goal name="ctensorint32_reset&#39;vc" expl="VC for ctensorint32_reset" proved="true">
- <proof prover="0"><result status="timeout" time="1.000000" steps="18810"/></proof>
+ <goal name="ctensorint64_reset&#39;vc" expl="VC for ctensorint64_reset" proved="true">
+ <proof prover="0"><result status="timeout" time="1.000000" steps="38572"/></proof>
  <proof prover="1"><result status="timeout" time="1.000000"/></proof>
- <proof prover="2"><result status="timeout" time="1.000000" steps="1622497"/></proof>
- <proof prover="3"><result status="timeout" time="1.000000" steps="184953"/></proof>
+ <proof prover="2"><result status="timeout" time="1.000000" steps="3481505"/></proof>
+ <proof prover="3"><result status="timeout" time="1.000000" steps="231468"/></proof>
  <transf name="split_vc" proved="true" >
-  <goal name="ctensorint32_reset&#39;vc.0" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.069825" steps="198275"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.0" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.044031" steps="201581"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.1" expl="integer overflow" proved="true">
-  <proof prover="2"><result status="valid" time="0.014417" steps="94064"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.1" expl="integer overflow" proved="true">
+  <proof prover="2"><result status="valid" time="0.010602" steps="96324"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.2" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.006748" steps="6119"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.2" expl="loop invariant init" proved="true">
+  <proof prover="2"><result status="valid" time="0.003508" steps="6491"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.3" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.020287" steps="110907"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.3" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.013106" steps="116763"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.4" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.076371" steps="15381"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.4" expl="precondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.052822" steps="15694"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.5" expl="loop invariant preservation" proved="true">
-  <proof prover="1"><result status="valid" time="0.057480" steps="12680"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.5" expl="loop invariant preservation" proved="true">
+  <proof prover="1"><result status="valid" time="0.049053" steps="13285"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.6" expl="assertion" proved="true">
-  <proof prover="1"><result status="valid" time="0.729639" steps="121894"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.6" expl="assertion" proved="true">
+  <proof prover="1"><result status="valid" time="0.362989" steps="98500"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.7" expl="postcondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.038609" steps="141349"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.7" expl="postcondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.016259" steps="145920"/></proof>
   </goal>
-  <goal name="ctensorint32_reset&#39;vc.8" expl="out of loop bounds" proved="true">
-  <proof prover="2"><result status="valid" time="0.022705" steps="118994"/></proof>
+  <goal name="ctensorint64_reset&#39;vc.8" expl="out of loop bounds" proved="true">
+  <proof prover="2"><result status="valid" time="0.018832" steps="122974"/></proof>
   </goal>
  </transf>
  </goal>

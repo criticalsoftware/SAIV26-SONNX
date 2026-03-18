@@ -20,7 +20,7 @@ lib:
 	@rm -fr ../code
 	@why3 extract $(EXTRACT) libvector.CIndex
 	@why3 extract $(EXTRACT) libtensor.CTensor
-	@why3 extract $(EXTRACT) libtensor.CTensorInt32
+	@why3 extract $(EXTRACT) libtensor.CTensorInt64
 	@cd ../code && gcc -c *.c
 	@find ../code -type f | sort
 
