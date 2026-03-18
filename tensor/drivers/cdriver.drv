@@ -25,10 +25,6 @@ module std.Cfloat
   syntax val      ( .<= )    "%1 <= %2"  prec 11 11 10
 end
 
-module log.Log
-  syntax val log "/* %1 */" prec 0
-end
-
 
 module libvector.CIndex
   interface "#include <stdlib.h>"
