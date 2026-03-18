@@ -18,9 +18,10 @@ where:
 - $Y$: output tensor
 
 ## Restrictions
-The following restrictions apply to the **Conv** operator for the SONNX profile:
 
 [General restrictions](./../common/general_restrictions.md) are applicable.
+
+The following specific restrictions apply to the **Conv** operator:
 
 | Restriction    | Statement | Origin |
 | -------- | ------- | ------- |
@@ -302,7 +303,7 @@ The shape of tensor $B$ is $dB_0$.
 
 ### $\text{Y}$ : `real tensor`
 
-The size of the output $Y$ will be $(dY_0 , dY_1 , dY_2 , dY_3)$ 
+The shape of the output $Y$ will be $(dY_0 , dY_1 , dY_2 , dY_3)$ 
 
 Where
 - $dY_0$ is the number of batches
