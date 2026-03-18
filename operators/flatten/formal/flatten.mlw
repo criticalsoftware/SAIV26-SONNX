@@ -73,6 +73,14 @@ module OPFlatten
     Cons dY0 (Cons dY1 Nil)
 
     
+    function normalize_axis (axis : int) (x_rank : int) : int
+    =
+    if axis < 0 then
+        axis + x_rank
+    else
+        axis
+
+
     function dflatten (x : tensor 'a) (y_shape: list int) : data 'a
     =
     fun ks ->
@@ -82,13 +90,6 @@ module OPFlatten
             x.data x_coords
         else 
             x.background
-
-    function normalize_axis (axis : int) (x_rank : int) : int
-    =
-    if axis < 0 then
-        axis + x_rank
-    else
-        axis
 
     let ghost function flatten (x : tensor 'a) (axis : int) : tensor 'a
     requires { -length x.dims <= axis <= length x.dims }
