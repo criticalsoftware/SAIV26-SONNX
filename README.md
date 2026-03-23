@@ -100,6 +100,8 @@ To replicate the proofs you should have the following tools installed (please ta
 
     - [Z3](https://github.com/Z3Prover/z3) - version 4.13.4
 
+- [Just](https://github.com/casey/just) - version >=1.42.3
+
 Once Why3 is installed, locate your `.why3.conf` file and add `/absolute/path/to/saiv/tensor/tensor` to the `loadpath` section. Replace `/absolute/path/to/` with the actual path to the repository on your system.
 
 ### Formal Verification
@@ -145,3 +147,20 @@ To clean generated files:
 ```bash
 make clean
 ```
+
+### Using Just
+
+The repository includes a `justfile` with recipes to run proofs, extract code, and clean artifacts across all operators at once.
+
+```bash
+just prove              # run Why3 proofs for all operators
+just prove add          # run proofs for a single operator
+
+just extract            # extract C code for all operators
+just extract sigmoid    # extract C code for a single operator
+
+just clean              # remove generated C code for all operators
+just clean tensor       # remove generated code for the tensor library only
+```
+
+All recipes accept an optional operator name; omitting it defaults to running across all supported operators.
