@@ -164,3 +164,10 @@ just clean tensor       # remove generated code for the tensor library only
 ```
 
 All recipes accept an optional operator name; omitting it defaults to running across all supported operators.
+
+The default prover is `alt-ergo`. To use a different prover, pass it via `--set`:
+
+```bash
+just --set prover z3 prove
+just --set prover cvc5 prove add
+```
