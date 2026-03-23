@@ -7,6 +7,7 @@
 
 .PHONY: lib clean
 
+CODE_DIR = ../code
 EXTRACT=-D c -D ../drivers/cdriver.drv  --modular --interface -o ../code
 
 # ==========================================================
@@ -14,9 +15,6 @@ EXTRACT=-D c -D ../drivers/cdriver.drv  --modular --interface -o ../code
 # ==========================================================
 
 lib:
-	@echo "------------------------------------------"
-	@echo "--- Extraction"
-	@echo "------------------------------------------"
 	@rm -fr ../code
 	@why3 extract $(EXTRACT) libvector.CIndex
 	@why3 extract $(EXTRACT) libtensor.CTensor
@@ -25,4 +23,4 @@ lib:
 	@find ../code -type f | sort
 
 clean:
-	rm -fr ../code
+	rm -rf $(CODE_DIR)/*.o

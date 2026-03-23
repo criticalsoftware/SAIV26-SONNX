@@ -1,1 +1,16 @@
+# C build artifacts
 *.o
+*.a
+*.so
+
+# Editor artifacts
+*~
+*.swp
+.vscode/
+
+# C language server
+compile_commands.json
+
+# Why3 temp artifacts
+why3session.xml.bak
+why3shapes.gz.bak
