@@ -26,7 +26,9 @@ The list is **empty** for a **scalar tensor** and **non-empty** for any other te
 
 A given tensor $X$ is said to have shape $[dX_0, dX_1, ..., dX_{rX-1}]$ where $dX_i$ is the size of the $i^{th}$ dimension.
 
-- Constants `minfloat16`,  `minfloat`,  `mindouble` (resp. `maxfloat16`, `maxfloat`, `maxdouble`) represent the minimum (resp. maximum) values for `float16`, `float`, `double`, `respectively`.
+### Tensor data
+
+Constants `minfloat16`,  `minfloat`,  `mindouble` (resp. `maxfloat16`, `maxfloat`, `maxdouble`) represent the minimum (resp. maximum) values for `float16`, `float`, `double`, `respectively`.
 
 ## Helper functions
 
