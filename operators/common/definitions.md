@@ -26,9 +26,22 @@ The list is **empty** for a **scalar tensor** and **non-empty** for any other te
 
 A given tensor $X$ is said to have shape $[dX_0, dX_1, ..., dX_{rX-1}]$ where $dX_i$ is the size of the $i^{th}$ dimension.
 
+<a id="subshape"></a>
+**Subshape**
+
+If one wants to specify a subshape of the a given tensor $X$, starting from the $i^{th}$ dimension to the end of the list, it can be denoted as $X\_shape_i$ where:
+
+$$X\_shape_i = [dX_i, dX_{i+1}, ..., dX_{rX-1}]$$
+
 ### Tensor data
 
 Constants `minfloat16`,  `minfloat`,  `mindouble` (resp. `maxfloat16`, `maxfloat`, `maxdouble`) represent the minimum (resp. maximum) values for `float16`, `float`, `double`, `respectively`.
+
+<a id="tensor_index"></a>
+
+### Tensor access 
+**Tensor index** (or **multi-index**): For an $n$-dimensional tensor $T$, a single element is addressed by an index tuple $i=(i_0,i_1,\dots,i_{n-1})$ where $i_k$ is the index along axis $k$.
+
 
 ## Helper functions
 
@@ -45,6 +58,8 @@ $$\mathit{size (\mathit{X\_shape})} = \prod_{i=0}^{rX-1} dX_i$$
 Where:
 - $\mathit{X\_shape}$ is the shape of the tensor $X$.
 
+> Note that the product over an empty range/interval is defined to be 1.
+
 #### Examples
 
 ```math
@@ -60,7 +75,7 @@ Where:
 
 Takes both a list of coordinates (to access a tensor) and a tensor shape as input and produces the flattened equivalent coordinate of the tensor.
 
-$$\mathit{offset (\mathit{coords}, \mathit{X\_shape})} = \sum_{i=0}^{rX-1} \left ( c_i \cdot \prod_{j=i+1}^{rX-1} dX_j \right ) $$
+$$\mathit{offset (\mathit{coords}, \mathit{X\_shape})} = \sum_{i=0}^{rX-1} \left ( c_i \cdot \mathit{size (X\_shape_{i+1})} \right ) $$
 
 Where:
 
@@ -68,7 +83,9 @@ Where:
 
 - $\mathit{X\_shape}$ is the shape of the tensor $X$.
 
->Note that the product over an empty range/interval is defined to be 1.
+- $\mathit{X\_shape_{i+1}}$ is a [subshape](#subshape) of the tensor $X$
+
+> Note that the product over an empty range/interval is defined to be 1.
 
 #### Examples
 
@@ -90,13 +107,24 @@ Takes both a flattened coordinate and a tensor shape as input and produces the e
 
 $$\mathit{index (\mathit{flat\_coord}, \mathit{X\_shape})} = [c_0, c_1, ..., c_{rX-1}]$$
 
+$$c_i = \displaystyle\frac{\displaystyle\mathit{k}}{\displaystyle\mathit{size (X\_shape_{i+1})}}$$
+
+$$k = \mathit{flat\_coord} - \displaystyle\sum_{j=0}^{i-1} \left( c_j \cdot \displaystyle\mathit{size (X\_shape_{j+1})}\right) $$
+
 Where:
 
 - $\mathit{flat\_coord}$ is the flattened coordinate to access the tensor.
 
 - $\mathit{X\_shape}$ is the shape of the tensor $X$.
 
-- $c_i = \left ( \displaystyle\frac{\mathit{flat\_coord}}{\displaystyle\prod_{j=i+1}^{rX-1} dX_j} \right ) \mod dX_i$
+- $\mathit{X\_shape_{i+1}}$ is a [subshape](#subshape) of the tensor $X$
+
+- $\mathit{X\_shape_{j+1}}$ is a [subshape](#subshape) of the tensor $X$
+
+> Note that the sum over an empty range/interval is defined to be 0.
+
+> Note that the product over an empty range/interval is defined to be 1.
+
 
 #### Examples
 
