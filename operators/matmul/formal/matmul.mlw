@@ -199,9 +199,16 @@ module COPMatmul
         assert { iter = get_dim (tensor a).Tensor.dims 1 };
  
         assert { tensor r == matmul (tensor a) (tensor b) };
+        free a_coords_array;
+        free b_coords_array;
+        free r_coords_array;
         flag
     end
-    else
+    else begin
+        free a_coords_array;
+        free b_coords_array;
+        free r_coords_array;
         flag
+    end
  
 end

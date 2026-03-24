@@ -57,8 +57,14 @@ int cmatmul(struct ctensor a, struct ctensor b, struct ctensor r) {
         }
       }
     }
+    free(a_coords_array);
+    free(b_coords_array);
+    free(r_coords_array);
     return flag;
   } else {
+    free(a_coords_array);
+    free(b_coords_array);
+    free(r_coords_array);
     return flag;
   }
 }

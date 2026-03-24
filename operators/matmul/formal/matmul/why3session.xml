@@ -596,13 +596,85 @@
    </goal>
   </transf>
   </goal>
-  <goal name="cmatmul&#39;vc.85" expl="postcondition" proved="true">
+  <goal name="cmatmul&#39;vc.85" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.000001" steps="16106"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.86" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.000001" steps="16117"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.87" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.020229" steps="206616"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.88" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004563" steps="16143"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.89" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008034" steps="16106"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.90" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007892" steps="16117"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.91" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.025503" steps="206610"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.92" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003879" steps="16143"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.93" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007648" steps="16106"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.94" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007859" steps="16117"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.95" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.024670" steps="206604"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.96" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007660" steps="16143"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.97" expl="postcondition" proved="true">
   <proof prover="2"><result status="valid" time="0.108511" steps="18177"/></proof>
   </goal>
-  <goal name="cmatmul&#39;vc.86" expl="out of loop bounds" proved="true">
-  <proof prover="3"><result status="valid" time="0.091877" steps="200638"/></proof>
+  <goal name="cmatmul&#39;vc.98" expl="out of loop bounds" proved="true">
+  <proof prover="3"><result status="valid" time="0.091877" steps="200818"/></proof>
   </goal>
-  <goal name="cmatmul&#39;vc.87" expl="postcondition" proved="true">
+  <goal name="cmatmul&#39;vc.99" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.006764" steps="9006"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.100" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.006972" steps="9015"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.101" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.005137" steps="9024"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.102" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.005129" steps="9031"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.103" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.005396" steps="9006"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.104" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003442" steps="9015"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.105" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.000001" steps="9024"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.106" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.005381" steps="9031"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.107" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003745" steps="9006"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.108" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007616" steps="9015"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.109" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.000001" steps="9024"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.110" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.005352" steps="9031"/></proof>
+  </goal>
+  <goal name="cmatmul&#39;vc.111" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.011895" steps="4724"/></proof>
   </goal>
  </transf>

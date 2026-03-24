@@ -23,6 +23,7 @@ struct __coords_from_X_p_result coords_from_x_p(struct ctensor x,
     x_coords_array[2] = n;
     x_coords_array[3] = m;
     x_coords = coffset(x_coords_array, x.t_dims, x.t_rank);
+    free(x_coords_array);
     if (x_coords >= 0) {
       result.__field_0 = x.t_data[x_coords];
       result.__field_1 = flag;
@@ -33,6 +34,7 @@ struct __coords_from_X_p_result coords_from_x_p(struct ctensor x,
       return result1;
     }
   } else {
+    free(x_coords_array);
     flag = 0;
     result2.__field_0 = ((double) 0.0);
     result2.__field_1 = flag;
@@ -92,6 +94,8 @@ struct __w_cools_calculate_result w_cools_calculate(struct ctensor x,
           w_val = w.t_data[w_coords];
           sum = sum + x_val * w_val;
         } else {
+          free(x_coords_array);
+          free(w_coords_array);
           flag = 0;
           result.__field_0 = ((double) 0.0);
           result.__field_1 = flag;
@@ -102,10 +106,14 @@ struct __w_cools_calculate_result w_cools_calculate(struct ctensor x,
         }
       }
     }
+    free(x_coords_array);
+    free(w_coords_array);
     result1.__field_0 = sum;
     result1.__field_1 = flag;
     return result1;
   } else {
+    free(x_coords_array);
+    free(w_coords_array);
     flag = 0;
     result2.__field_0 = ((double) 0.0);
     result2.__field_1 = flag;
@@ -255,6 +263,7 @@ int cconv(struct ctensor x, struct ctensor w, struct ctensor r,
                       r_coords = coffset(r_coords_array, r.t_dims, r.t_rank);
                       r.t_data[r_coords] = value;
                     } else {
+                      free(r_coords_array);
                       return 0;
                     }
                     if (y_ww == o3) {
@@ -277,8 +286,10 @@ int cconv(struct ctensor x, struct ctensor w, struct ctensor r,
         }
       }
     }
+    free(r_coords_array);
     return 1;
   } else {
+    free(r_coords_array);
     return 0;
   }
 }

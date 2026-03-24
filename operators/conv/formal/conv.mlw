@@ -165,6 +165,8 @@ module COPConv2d
     use layout.CFlat
     use tensor.Range
 
+    use mach.c.C
+
   (* Accessing through get_dim yields the same result as value_at *)
   let lemma ivector_get_dim_value_at (coords: iarray) (n: int) (i: int)
     requires { n = 4 }
@@ -207,6 +209,7 @@ module COPConv2d
       assert { ivector x_coords_array 4 = Cons (to_int b) (Cons (to_int c) (Cons (to_int n) (Cons (to_int m) Nil))) } ;
       
       let x_coords = coffset x_coords_array x.t_dims x.t_rank in
+      free x_coords_array;
       if x_coords >= 0 then begin
         (x.t_data[x_coords], flag)
       end
@@ -215,6 +218,7 @@ module COPConv2d
       end
     end
     else begin
+      free x_coords_array;
       flag <- False;
       ((f32 0.0), flag)
     end
@@ -234,6 +238,10 @@ module COPConv2d
           assert { islice ds p q = Cons (Int32.to_int (value_at ds p)) (islice ds (p+1) q) };
           valid_bounds ks ds (p+1) q
         end
+
+  predicate check_free (c: ptr 'a) (n: int) =
+    is_not_null c /\ c.offset = 0 /\ c.min = 0 /\ c.max = n /\ plength c = n /\
+    forall i. 0 <= i < n -> c.offset + i < c.max
 
   let w_cools_calculate (x w: ctensor) (c: int32) (i:int32) (n m y_h y_w: int32)  (str_h str_w :int32) (dil_h dil_w :int32) (pad_top pad_left :int32) : (float, bool)
   requires { valid_tensor x }
@@ -270,6 +278,8 @@ module COPConv2d
       flag <- True;
       for jj = 0 to cols - 1 do
         invariant { sum = w_cools_calculate (tensor x) (tensor w) c i jj 0 n m y_h y_w str_h str_w dil_h dil_w pad_top pad_left }
+        invariant { check_free x_coords_array 4 }
+        invariant { check_free w_coords_array 4 }
         let x_h = y_h * str_h + i * dil_h in
         let x_w = y_w * str_w + jj * dil_w in
         x_coords_array[0] <- n;
@@ -302,13 +312,19 @@ module COPConv2d
           assert { sum = w_cools_calculate (tensor x) (tensor w) c i Int.(jj+1) 0 n m y_h y_w str_h str_w dil_h dil_w pad_top pad_left }
         end
         else begin
+          free x_coords_array;
+          free w_coords_array;
           flag <- False;
           return (f32 0.0, flag)
         end
       done;
+      free x_coords_array;
+      free w_coords_array;
       (sum, flag)
     end
     else begin
+      free x_coords_array;
+      free w_coords_array;
       flag <- False;
       (f32 0.0, flag)
     end
@@ -466,6 +482,7 @@ let cconv (x w r : ctensor) (str_h str_w : int32) (dil_h dil_w : int32)
               )
             )
         }
+        invariant { check_free r_coords_array 4 }
         r_coords_array[0] <- nn;
         for mm = 0 to m - 1 do
           invariant { value_at r_coords_array 0 = nn }
@@ -493,6 +510,7 @@ let cconv (x w r : ctensor) (str_h str_w : int32) (dil_h dil_w : int32)
                 )
               )
           }
+          invariant { check_free r_coords_array 4 }
           r_coords_array[1] <- mm;
           for y_hh = 0 to y_h - 1 do
             invariant { value_at r_coords_array 0 = nn /\ value_at r_coords_array 1 = mm }
@@ -530,6 +548,7 @@ let cconv (x w r : ctensor) (str_h str_w : int32) (dil_h dil_w : int32)
                 )
             
             }
+            invariant { check_free r_coords_array 4 }
             r_coords_array[2] <- y_hh;
             for y_ww = 0 to y_w - 1 do
               invariant { value_at r_coords_array 0 = nn /\ value_at r_coords_array 1 = mm /\ value_at r_coords_array 2 = y_hh }
@@ -573,6 +592,7 @@ let cconv (x w r : ctensor) (str_h str_w : int32) (dil_h dil_w : int32)
                   let off = CFlat.offset coords dims in
                   (value_at r.t_data off) = w_channels_calculate (tensor x) (tensor w) (to_int (value_at w.t_dims 1)) 0 (to_int(value_at w.t_dims 2)) (to_int(value_at w.t_dims 3)) ( nn) ( mm) ( y_hh) yy_ww ( str_h) (to_int str_w) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left)
               }
+              invariant { check_free r_coords_array 4 }
               r_coords_array[3] <- y_ww;
               let (value, flag) = w_channels_calculate x w nn mm y_hh y_ww str_h str_w dil_h dil_w pad_top pad_left in
               if flag then begin
@@ -712,16 +732,21 @@ let cconv (x w r : ctensor) (str_h str_w : int32) (dil_h dil_w : int32)
                             )
                           )}
               end
-              else
-                return false
+              else begin
+                free r_coords_array;
+                return false;
+              end
             done;
           done;
         done;
       done;
     assert { tensor r == conv (tensor x) (tensor w) (to_int str_h) (to_int str_w) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_right) } ;
-    true
+    free r_coords_array;
+    true;
     end
-    else
+    else begin
+      free r_coords_array;
       false
+    end
 
 end

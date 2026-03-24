@@ -52,7 +52,7 @@ module ExtendedCFloat
     let constant zero = f64 0.0
     let constant one  = f64 1.0
 
-    val function max (a b : float) : float
+    val function cmax (a b : float) : float
         ensures { result = max_er a b }
 
 end
@@ -331,6 +331,8 @@ module COPMaxpool2d
     use ExtendedCFloat
     use ExtendedReal
 
+    use mach.c.C
+
 
     let coords_from_X_p (x: ctensor) (x_p_coords : iarray) ( pad_top pad_left : int32) : (float, bool)
     requires { valid_tensor x }
@@ -359,6 +361,7 @@ module COPMaxpool2d
         assert { ivector x_coords_array 4 = Cons (to_int b) (Cons (to_int c) (Cons (to_int n) (Cons (to_int m) Nil))) } ;
 
         let x_coords = coffset x_coords_array x.t_dims x.t_rank in
+        free x_coords_array;
         if x_coords >= 0 then begin
             (x.t_data[x_coords], flag)
         end
@@ -367,10 +370,15 @@ module COPMaxpool2d
         end
     end
     else begin
+        free x_coords_array;
         flag <- False;
         (FNegInf, flag)
     end
 
+
+    predicate check_free (c: ptr 'a) (n: int) =
+        is_not_null c /\ c.offset = 0 /\ c.min = 0 /\ c.max = n /\ plength c = n /\
+        forall i. 0 <= i < n -> c.offset + i < c.max
 
     let w_cools_calculate (x: ctensor) (h w: int32) (b c m n: int32) (dil_h dil_w :int32) (pad_top pad_left pad_bottom pad_rigth :int32) (str_h str_w :int32) : (float, bool)
     requires { valid_tensor x }
@@ -402,6 +410,7 @@ module COPMaxpool2d
         let x_h = m * str_h + h * dil_h in
         for ww = 0 to w-1 do
             invariant { max_value = w_cools_calculate (tensor x) (to_int h) ww 0 (to_int b) (to_int c) (to_int m) (to_int n) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_rigth) (to_int str_h) (to_int str_w) }
+            invariant { check_free x_p_coords_array 4 }
             let x_w = n * str_w + ww * dil_w in
             x_p_coords_array[0] <- b ;
             x_p_coords_array[1] <- c ;
@@ -412,16 +421,21 @@ module COPMaxpool2d
 
                 ghost w_cools_split (tensor x) (to_int h) (to_int w) 0 (to_int ww) (to_int b) (to_int c) (to_int m) (to_int n) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_rigth) (to_int str_h) (to_int str_w);
 
-                max_value <- max max_value x_val ;
+                max_value <- cmax max_value x_val ;
                 assert { ivector x_p_coords_array 4 = Cons (to_int b) (Cons (to_int c) (Cons (to_int x_h) (Cons (to_int x_w) Nil))) } ;
             end
-            else
+            else begin
+                free x_p_coords_array;
                 return (FNegInf, False)
+            end
         done ;
+        free x_p_coords_array;
         (max_value, flag)
     end
-    else
+    else begin
+        free x_p_coords_array;
         (FNegInf, flag)
+    end
 
 
     let w_lines_calculate (x: ctensor) (h w: int32) (b c m n: int32) (dil_h dil_w :int32) (pad_top pad_left pad_bottom pad_rigth :int32) (str_h str_w :int32) : (float, bool)
@@ -456,7 +470,7 @@ module COPMaxpool2d
         invariant { max_value = w_lines_calculate (tensor x) hh 0 (to_int w) (to_int b) (to_int c) (to_int m) (to_int n) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_rigth) (to_int str_h) (to_int str_w) }
         let (value, aux_flag) = w_cools_calculate x hh w b c m n dil_h dil_w pad_top pad_left pad_bottom pad_rigth str_h str_w in
         if aux_flag then begin
-            max_value <- max max_value value ;
+            max_value <- cmax max_value value ;
         end
         else
             return (FNegInf, False)
@@ -536,6 +550,7 @@ module COPMaxpool2d
                         )
                     )
             }
+            invariant { check_free r_coords_array 4 }
             r_coords_array[0] <- bb ;
             for cc = 0 to c-1 do
                 invariant { value_at r_coords_array 0 = bb }
@@ -563,6 +578,7 @@ module COPMaxpool2d
                             )
                         )
                 }
+                invariant { check_free r_coords_array 4 }
                 r_coords_array[1] <- cc ;
                 for mm = 0 to m-1 do
                     invariant { value_at r_coords_array 0 = bb /\ value_at r_coords_array 1 = cc }
@@ -599,6 +615,7 @@ module COPMaxpool2d
                                 value_at r.t_data off =  w_lines_calculate (tensor x) (to_int h) 0 (to_int w) bb cc mm_ nn_ (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_right) (to_int str_h) (to_int str_w)
                             )
                     }
+                    invariant { check_free r_coords_array 4 }
                     r_coords_array[2] <- mm ;
                     for nn = 0 to n-1 do
                         invariant { value_at r_coords_array 0 = bb /\ value_at r_coords_array 1 = cc /\ value_at r_coords_array 2 = mm }
@@ -642,6 +659,7 @@ module COPMaxpool2d
                                 let off = CFlat.offset coords dims in
                                 value_at r.t_data off =  w_lines_calculate (tensor x) (to_int h) 0 (to_int w) bb cc mm nn_ (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_right) (to_int str_h) (to_int str_w)
                         }
+                        invariant { check_free r_coords_array 4 }
                         r_coords_array[3] <- nn ;
                         let r_coords = coffset r_coords_array r.t_dims r.t_rank in
                         let (value, flag) = w_lines_calculate x h w bb cc mm nn dil_h dil_w pad_top pad_left pad_bottom pad_right str_h str_w in
@@ -805,6 +823,7 @@ module COPMaxpool2d
                             };
                         end
                         else
+                            free r_coords_array;
                             return false
                     done;
                 done;
@@ -812,10 +831,13 @@ module COPMaxpool2d
         done;        
         assert { ivector r.t_dims r.t_rank = Cons (to_int b) (Cons (to_int c) (Cons (to_int m) (Cons (to_int n) Nil))) };
         assert { tensor r == maxpool (tensor x) (to_int h) (to_int w) (to_int dil_h) (to_int dil_w) (to_int pad_top) (to_int pad_left) (to_int pad_bottom) (to_int pad_right) (to_int str_h) (to_int str_w) };
+        free r_coords_array;
         true
     end
-    else
+    else begin
+        free r_coords_array;
         false
+    end
 
 end
   

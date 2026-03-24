@@ -132,13 +132,13 @@
   <proof prover="3"><result status="valid" time="0.023063" steps="120209"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.3" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.015379" steps="113430"/></proof>
+  <proof prover="3"><result status="valid" time="0.020850" steps="113430"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.4" expl="precondition" proved="true">
   <proof prover="3"><result status="valid" time="0.016704" steps="121797"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.5" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.020850" steps="113948"/></proof>
+  <proof prover="3"><result status="valid" time="0.015379" steps="113948"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.6" expl="precondition" proved="true">
   <proof prover="3"><result status="valid" time="0.008612" steps="7068"/></proof>
@@ -175,7 +175,7 @@
    <goal name="coords_from_X_p&#39;vc.16.0" expl="assertion" proved="true">
    <transf name="split_all_full" proved="true" >
     <goal name="coords_from_X_p&#39;vc.16.0.0" expl="assertion" proved="true">
-    <proof prover="0" timelimit="5" memlimit="2000"><result status="valid" time="3.607758" steps="258421"/></proof>
+    <proof prover="0" timelimit="5" memlimit="2000"><result status="valid" time="2.384996" steps="258423"/></proof>
     </goal>
    </transf>
    </goal>
@@ -188,15 +188,39 @@
   <proof prover="3"><result status="valid" time="0.049256" steps="187905"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.19" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="1.155542" steps="1870898"/></proof>
+  <proof prover="3"><result status="valid" time="0.673688" steps="1870898"/></proof>
   </goal>
   <goal name="coords_from_X_p&#39;vc.20" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.162575" steps="28263"/></proof>
+  <proof prover="3"><result status="valid" time="0.007345" steps="12641"/></proof>
   </goal>
-  <goal name="coords_from_X_p&#39;vc.21" expl="postcondition" proved="true">
+  <goal name="coords_from_X_p&#39;vc.21" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007798" steps="12652"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.22" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.015921" steps="146893"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.23" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004903" steps="12678"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.24" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" time="0.162575" steps="28176"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.25" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.003796" steps="13489"/></proof>
   </goal>
-  <goal name="coords_from_X_p&#39;vc.22" expl="postcondition" proved="true">
+  <goal name="coords_from_X_p&#39;vc.26" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003213" steps="7440"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.27" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008416" steps="7449"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.28" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003567" steps="7458"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.29" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.006947" steps="7465"/></proof>
+  </goal>
+  <goal name="coords_from_X_p&#39;vc.30" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.004151" steps="7911"/></proof>
   </goal>
  </transf>
@@ -210,85 +234,90 @@
   <proof prover="3"><result status="valid" time="0.006462" steps="9676"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.2" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.007998" steps="7247"/></proof>
+  <proof prover="3"><result status="valid" time="0.027192" steps="122630"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.3" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.004129" steps="7256"/></proof>
+  <proof prover="1" obsolete="true"><result status="valid" time="0.096059" steps="9198"/></proof>
+  <proof prover="3"><result status="valid" time="0.017277" steps="123014"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.4" expl="integer overflow" proved="true">
-  <proof prover="2"><result status="valid" time="0.053102" steps="13513"/></proof>
+  <proof prover="2"><result status="valid" time="0.073580" steps="14749"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.5" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.027192" steps="132535"/></proof>
+  <proof prover="3"><result status="valid" time="0.007998" steps="132535"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.6" expl="loop invariant init" proved="true">
   <proof prover="3"><result status="valid" time="0.031705" steps="159353"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.7" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.077635" steps="5424"/></proof>
+  <goal name="w_cools_calculate&#39;vc.7" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.043829" steps="162060"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.8" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.006826" steps="8027"/></proof>
+  <proof prover="1"><result status="valid" time="0.388339" steps="11497"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.9" expl="integer overflow" proved="true">
-  <proof prover="1"><result status="valid" time="0.096059" steps="9198"/></proof>
+  <proof prover="2" obsolete="true"><result status="valid" time="0.053102" steps="13513"/></proof>
+  <proof prover="3"><result status="valid" time="0.020453" steps="145334"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.10" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.006988" steps="11781"/></proof>
+  <goal name="w_cools_calculate&#39;vc.10" expl="integer overflow" proved="true">
+  <proof prover="1"><result status="valid" time="0.627911" steps="18518"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.11" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.009501" steps="15443"/></proof>
+  <proof prover="3"><result status="valid" time="0.006988" steps="11907"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.12" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.004422" steps="12265"/></proof>
+  <proof prover="3"><result status="valid" time="0.009501" steps="169848"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.13" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.006996" steps="16071"/></proof>
+  <proof prover="3"><result status="valid" time="0.004422" steps="12565"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.14" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.015138" steps="12416"/></proof>
+  <proof prover="3"><result status="valid" time="0.006996" steps="180640"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.15" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.004676" steps="16252"/></proof>
+  <proof prover="3"><result status="valid" time="0.015138" steps="12716"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.16" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007561" steps="12567"/></proof>
+  <proof prover="3"><result status="valid" time="0.004676" steps="181919"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.17" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.010949" steps="16433"/></proof>
+  <proof prover="3"><result status="valid" time="0.007561" steps="12867"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.18" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.003342" steps="8622"/></proof>
+  <proof prover="3"><result status="valid" time="0.010949" steps="183210"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.19" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.008085" steps="8635"/></proof>
+  <proof prover="3"><result status="valid" time="0.003342" steps="8838"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.20" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.046952" steps="200559"/></proof>
+  <proof prover="3"><result status="valid" time="0.008085" steps="8851"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.21" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007425" steps="12788"/></proof>
+  <proof prover="3"><result status="valid" time="0.046952" steps="202865"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.22" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.067129" steps="17250"/></proof>
+  <proof prover="3"><result status="valid" time="0.007425" steps="13088"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.23" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.176376" steps="12426"/></proof>
+  <proof prover="2"><result status="valid" time="0.067129" steps="17319"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.24" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.004076" steps="8654"/></proof>
+  <proof prover="1"><result status="valid" time="0.176376" steps="12442"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.25" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.038675" steps="192956"/></proof>
+  <proof prover="3"><result status="valid" time="0.004076" steps="8870"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.26" expl="assertion" proved="true">
+  <goal name="w_cools_calculate&#39;vc.26" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.038675" steps="195255"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.27" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
-   <goal name="w_cools_calculate&#39;vc.26.0" expl="assertion" proved="true">
+   <goal name="w_cools_calculate&#39;vc.27.0" expl="assertion" proved="true">
    <transf name="inline_goal" proved="true" >
-    <goal name="w_cools_calculate&#39;vc.26.0.0" expl="assertion" proved="true">
+    <goal name="w_cools_calculate&#39;vc.27.0.0" expl="assertion" proved="true">
     <transf name="split_all_full" proved="true" >
-     <goal name="w_cools_calculate&#39;vc.26.0.0.0" expl="assertion" proved="true">
-     <proof prover="0"><result status="valid" time="12.632262" steps="506177"/></proof>
+     <goal name="w_cools_calculate&#39;vc.27.0.0.0" expl="assertion" proved="true">
+     <proof prover="0"><result status="valid" time="8.646995" steps="505027"/></proof>
      </goal>
     </transf>
     </goal>
@@ -296,19 +325,58 @@
    </goal>
   </transf>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.27" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.709560" steps="70955"/></proof>
+  <goal name="w_cools_calculate&#39;vc.28" expl="loop invariant preservation" proved="true">
+  <proof prover="2"><result status="valid" time="0.381985" steps="71366"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.28" expl="postcondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.003801" steps="4596"/></proof>
+  <goal name="w_cools_calculate&#39;vc.29" expl="loop invariant preservation" proved="true">
+  <proof prover="3"><result status="valid" time="0.042353" steps="216963"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.29" expl="postcondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.091309" steps="313998"/></proof>
+  <goal name="w_cools_calculate&#39;vc.30" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008093" steps="13084"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.30" expl="VC for w_cools_calculate" proved="true">
-  <proof prover="3"><result status="valid" time="0.043829" steps="158679"/></proof>
+  <goal name="w_cools_calculate&#39;vc.31" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.019173" steps="164299"/></proof>
   </goal>
-  <goal name="w_cools_calculate&#39;vc.31" expl="postcondition" proved="true">
+  <goal name="w_cools_calculate&#39;vc.32" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.029080" steps="164943"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.33" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004278" steps="13121"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.34" expl="postcondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003801" steps="4698"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.35" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008238" steps="11814"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.36" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.020972" steps="144316"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.37" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.016467" steps="144963"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.38" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.010653" steps="11863"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.39" expl="postcondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.091309" steps="371086"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.40" expl="out of loop bounds" proved="true">
+  <proof prover="3"><result status="valid" time="0.028120" steps="158754"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.41" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008638" steps="7248"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.42" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004253" steps="7257"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.43" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004911" steps="7266"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.44" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004560" steps="7273"/></proof>
+  </goal>
+  <goal name="w_cools_calculate&#39;vc.45" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.004025" steps="4035"/></proof>
   </goal>
  </transf>
@@ -349,7 +417,7 @@
   <proof prover="1"><result status="valid" time="0.055434" steps="282"/></proof>
   </goal>
   <goal name="w_lines_calculate&#39;vc.11" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="1.654494" steps="129608"/></proof>
+  <proof prover="2"><result status="valid" time="1.027074" steps="129980"/></proof>
   </goal>
   <goal name="w_lines_calculate&#39;vc.12" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.004833" steps="3835"/></proof>
@@ -386,144 +454,157 @@
   <proof prover="3"><result status="valid" time="0.014815" steps="13321"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.6" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.049003" steps="216002"/></proof>
+  <proof prover="3"><result status="valid" time="0.044115" steps="216002"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.7" expl="loop invariant init" proved="true">
   <proof prover="3"><result status="valid" time="0.008961" steps="10657"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.8" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007800" steps="17022"/></proof>
+  <goal name="cmaxpool&#39;vc.8" expl="loop invariant init" proved="true">
+  <proof prover="2" obsolete="true"><result status="valid" time="0.110640" steps="30719"/></proof>
+  <proof prover="3"><result status="valid" time="0.047081" steps="215308"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.9" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.008040" steps="22057"/></proof>
+  <proof prover="3"><result status="valid" time="0.007800" steps="17331"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.10" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.129976" steps="433697"/></proof>
+  <goal name="cmaxpool&#39;vc.10" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008040" steps="247699"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.11" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.055291" steps="242366"/></proof>
+  <goal name="cmaxpool&#39;vc.11" expl="integer overflow" proved="true">
+  <proof prover="3"><result status="valid" time="0.216654" steps="453578"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.12" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.059114" steps="255904"/></proof>
+  <proof prover="3"><result status="valid" time="0.055291" steps="257909"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.13" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.008366" steps="12026"/></proof>
+  <proof prover="3"><result status="valid" time="0.059114" steps="271996"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.14" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.011891" steps="18576"/></proof>
+  <goal name="cmaxpool&#39;vc.14" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.008366" steps="12367"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.15" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.012299" steps="23979"/></proof>
+  <goal name="cmaxpool&#39;vc.15" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.055092" steps="259371"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.16" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.216654" steps="695018"/></proof>
+  <goal name="cmaxpool&#39;vc.16" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.011891" steps="18995"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.17" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.238244" steps="809132"/></proof>
+  <goal name="cmaxpool&#39;vc.17" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.012299" steps="275316"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.18" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.064504" steps="281071"/></proof>
+  <goal name="cmaxpool&#39;vc.18" expl="integer overflow" proved="true">
+  <proof prover="3"><result status="valid" time="0.129976" steps="716938"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.19" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.056359" steps="280959"/></proof>
+  <proof prover="3"><result status="valid" time="0.238244" steps="831477"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.20" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.007867" steps="13036"/></proof>
+  <proof prover="3"><result status="valid" time="0.064504" steps="298422"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.21" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.008648" steps="20489"/></proof>
+  <goal name="cmaxpool&#39;vc.21" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.056359" steps="298310"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.22" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.008987" steps="26344"/></proof>
+  <goal name="cmaxpool&#39;vc.22" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.007867" steps="13351"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.23" expl="integer overflow" proved="true">
-  <proof prover="3"><result status="valid" time="0.723557" steps="1488675"/></proof>
+  <goal name="cmaxpool&#39;vc.23" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.035988" steps="287525"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.24" expl="loop invariant init" proved="true">
-  <proof prover="2"><result status="valid" time="0.106504" steps="25263"/></proof>
+  <goal name="cmaxpool&#39;vc.24" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008648" steps="20874"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.25" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.064559" steps="314410"/></proof>
+  <goal name="cmaxpool&#39;vc.25" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.008987" steps="307916"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.26" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.058030" steps="314299"/></proof>
+  <goal name="cmaxpool&#39;vc.26" expl="integer overflow" proved="true">
+  <proof prover="3"><result status="valid" time="0.479571" steps="1512905"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.27" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.056114" steps="313947"/></proof>
+  <proof prover="2"><result status="valid" time="0.106504" steps="25425"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.28" expl="loop invariant init" proved="true">
-  <proof prover="3"><result status="valid" time="0.003907" steps="14208"/></proof>
+  <proof prover="3"><result status="valid" time="0.064559" steps="333016"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.29" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007668" steps="22722"/></proof>
+  <goal name="cmaxpool&#39;vc.29" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.058030" steps="332905"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.30" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.008337" steps="29109"/></proof>
+  <goal name="cmaxpool&#39;vc.30" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.056114" steps="332173"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.31" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.055359" steps="334108"/></proof>
+  <goal name="cmaxpool&#39;vc.31" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.003907" steps="14497"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.32" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.071330" steps="420749"/></proof>
+  <goal name="cmaxpool&#39;vc.32" expl="loop invariant init" proved="true">
+  <proof prover="3"><result status="valid" time="0.052605" steps="324571"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.33" expl="precondition" proved="true">
-  <proof prover="2"><result status="valid" time="0.104988" steps="28127"/></proof>
+  <proof prover="3"><result status="valid" time="0.007668" steps="23073"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.34" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.004884" steps="14613"/></proof>
+  <proof prover="3"><result status="valid" time="0.008337" steps="348262"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.35" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.011229" steps="93707"/></proof>
+  <proof prover="3"><result status="valid" time="0.055359" steps="353379"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.36" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007460" steps="14629"/></proof>
+  <proof prover="3"><result status="valid" time="0.071330" steps="443558"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.37" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007842" steps="14634"/></proof>
+  <proof prover="2"><result status="valid" time="0.104988" steps="28167"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.38" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.158362" steps="1536"/></proof>
+  <proof prover="3"><result status="valid" time="0.004884" steps="14876"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.39" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.202461" steps="1750"/></proof>
+  <proof prover="3"><result status="valid" time="0.011229" steps="95341"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.40" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.281246" steps="2583"/></proof>
+  <proof prover="3"><result status="valid" time="0.007460" steps="14892"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.41" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.211856" steps="1551"/></proof>
+  <proof prover="3"><result status="valid" time="0.007842" steps="14897"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.42" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.217810" steps="1759"/></proof>
+  <proof prover="1"><result status="valid" time="0.158362" steps="1421"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.43" expl="precondition" proved="true">
-  <proof prover="1"><result status="valid" time="0.274902" steps="2625"/></proof>
+  <proof prover="1"><result status="valid" time="0.202461" steps="1619"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.44" expl="precondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.038495" steps="283775"/></proof>
+  <proof prover="1"><result status="valid" time="0.281246" steps="2454"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.45" expl="precondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.211856" steps="1436"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.46" expl="precondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.217810" steps="1634"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.47" expl="precondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.274902" steps="2490"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.48" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.038495" steps="291649"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.49" expl="precondition" proved="true">
   <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.45.0" expl="precondition" proved="true">
-   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="3.475588" steps="204786"/></proof>
+   <goal name="cmaxpool&#39;vc.49.0" expl="precondition" proved="true">
+   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="2.395833" steps="205870"/></proof>
    </goal>
-   <goal name="cmaxpool&#39;vc.45.1" expl="precondition" proved="true">
-   <proof prover="2"><result status="valid" time="0.349229" steps="57968"/></proof>
+   <goal name="cmaxpool&#39;vc.49.1" expl="precondition" proved="true">
+   <proof prover="2"><result status="valid" time="0.349229" steps="58584"/></proof>
    </goal>
   </transf>
   </goal>
-  <goal name="cmaxpool&#39;vc.46" expl="assertion" proved="true">
+  <goal name="cmaxpool&#39;vc.50" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.46.0" expl="assertion" proved="true">
+   <goal name="cmaxpool&#39;vc.50.0" expl="assertion" proved="true">
    <transf name="inline_goal" proved="true" >
-    <goal name="cmaxpool&#39;vc.46.0.0" expl="assertion" proved="true">
+    <goal name="cmaxpool&#39;vc.50.0.0" expl="assertion" proved="true">
     <transf name="split_all_full" proved="true" >
-     <goal name="cmaxpool&#39;vc.46.0.0.0" expl="assertion" proved="true">
+     <goal name="cmaxpool&#39;vc.50.0.0.0" expl="assertion" proved="true">
      <transf name="compute_in_goal" proved="true" >
-      <goal name="cmaxpool&#39;vc.46.0.0.0.0" expl="assertion" proved="true">
+      <goal name="cmaxpool&#39;vc.50.0.0.0.0" expl="assertion" proved="true">
       <transf name="split_vc" proved="true" >
-       <goal name="cmaxpool&#39;vc.46.0.0.0.0.0" expl="assertion" proved="true">
-       <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="14.475302" steps="602365"/></proof>
+       <goal name="cmaxpool&#39;vc.50.0.0.0.0.0" expl="assertion" proved="true">
+       <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="10.950623" steps="603778"/></proof>
        </goal>
       </transf>
       </goal>
@@ -535,55 +616,18 @@
    </goal>
   </transf>
   </goal>
-  <goal name="cmaxpool&#39;vc.47" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.007274" steps="23429"/></proof>
-  </goal>
-  <goal name="cmaxpool&#39;vc.48" expl="assertion" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.48.0" expl="assertion" proved="true">
-   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="4.216790" steps="219529"/></proof>
-   </goal>
-  </transf>
-  </goal>
-  <goal name="cmaxpool&#39;vc.49" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.058885" steps="289452"/></proof>
-  </goal>
-  <goal name="cmaxpool&#39;vc.50" expl="assertion" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.50.0" expl="assertion" proved="true">
-   <transf name="compute_in_goal" proved="true" >
-    <goal name="cmaxpool&#39;vc.50.0.0" expl="assertion" proved="true">
-    <transf name="split_vc" proved="true" >
-     <goal name="cmaxpool&#39;vc.50.0.0.0" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.068303" steps="333141"/></proof>
-     </goal>
-     <goal name="cmaxpool&#39;vc.50.0.0.1" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.009027" steps="15728"/></proof>
-     </goal>
-     <goal name="cmaxpool&#39;vc.50.0.0.2" expl="assertion" proved="true">
-     <proof prover="2"><result status="valid" time="0.267434" steps="44976"/></proof>
-     </goal>
-     <goal name="cmaxpool&#39;vc.50.0.0.3" expl="assertion" proved="true">
-     <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="5.244301" steps="332341"/></proof>
-     </goal>
-    </transf>
-    </goal>
-   </transf>
-   </goal>
-  </transf>
-  </goal>
   <goal name="cmaxpool&#39;vc.51" expl="assertion" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.51.0" expl="assertion" proved="true">
-   <proof prover="3"><result status="valid" time="0.188993" steps="553080"/></proof>
-   </goal>
-  </transf>
+  <proof prover="3"><result status="valid" time="0.007274" steps="23804"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.52" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.234380" steps="555641"/></proof>
+  <transf name="split_vc" proved="true" >
+   <goal name="cmaxpool&#39;vc.52.0" expl="assertion" proved="true">
+   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="2.729895" steps="220460"/></proof>
+   </goal>
+  </transf>
   </goal>
   <goal name="cmaxpool&#39;vc.53" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.048214" steps="298167"/></proof>
+  <proof prover="3"><result status="valid" time="0.058885" steps="297348"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.54" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
@@ -592,16 +636,16 @@
     <goal name="cmaxpool&#39;vc.54.0.0" expl="assertion" proved="true">
     <transf name="split_vc" proved="true" >
      <goal name="cmaxpool&#39;vc.54.0.0.0" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.082769" steps="340883"/></proof>
+     <proof prover="3"><result status="valid" time="0.068303" steps="351228"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.54.0.0.1" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.012919" steps="16134"/></proof>
+     <proof prover="3"><result status="valid" time="0.009027" steps="15991"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.54.0.0.2" expl="assertion" proved="true">
-     <proof prover="2"><result status="valid" time="0.334173" steps="45694"/></proof>
+     <proof prover="2"><result status="valid" time="0.267434" steps="45376"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.54.0.0.3" expl="assertion" proved="true">
-     <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="6.227319" steps="385752"/></proof>
+     <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="3.524879" steps="333319"/></proof>
      </goal>
     </transf>
     </goal>
@@ -612,15 +656,15 @@
   <goal name="cmaxpool&#39;vc.55" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
    <goal name="cmaxpool&#39;vc.55.0" expl="assertion" proved="true">
-   <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="6.627115" steps="287533"/></proof>
+   <proof prover="3"><result status="valid" time="0.188993" steps="581937"/></proof>
    </goal>
   </transf>
   </goal>
   <goal name="cmaxpool&#39;vc.56" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.186173" steps="586349"/></proof>
+  <proof prover="3"><result status="valid" time="0.234380" steps="584968"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.57" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.054817" steps="310116"/></proof>
+  <proof prover="3"><result status="valid" time="0.048214" steps="306063"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.58" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
@@ -629,16 +673,16 @@
     <goal name="cmaxpool&#39;vc.58.0.0" expl="assertion" proved="true">
     <transf name="split_vc" proved="true" >
      <goal name="cmaxpool&#39;vc.58.0.0.0" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.053279" steps="351669"/></proof>
+     <proof prover="3"><result status="valid" time="0.082769" steps="359333"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.58.0.0.1" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.008029" steps="16684"/></proof>
+     <proof prover="3"><result status="valid" time="0.012919" steps="16397"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.58.0.0.2" expl="assertion" proved="true">
-     <proof prover="2"><result status="valid" time="0.386593" steps="47099"/></proof>
+     <proof prover="2"><result status="valid" time="0.334173" steps="46094"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.58.0.0.3" expl="assertion" proved="true">
-     <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="8.006685" steps="430502"/></proof>
+     <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="4.198936" steps="386542"/></proof>
      </goal>
     </transf>
     </goal>
@@ -649,15 +693,15 @@
   <goal name="cmaxpool&#39;vc.59" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
    <goal name="cmaxpool&#39;vc.59.0" expl="assertion" proved="true">
-   <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="7.049113" steps="323060"/></proof>
+   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="4.027736" steps="288390"/></proof>
    </goal>
   </transf>
   </goal>
   <goal name="cmaxpool&#39;vc.60" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.199038" steps="616509"/></proof>
+  <proof prover="3"><result status="valid" time="0.186173" steps="616103"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.61" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.058500" steps="325273"/></proof>
+  <proof prover="3"><result status="valid" time="0.054817" steps="318012"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.62" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
@@ -666,16 +710,16 @@
     <goal name="cmaxpool&#39;vc.62.0.0" expl="assertion" proved="true">
     <transf name="split_vc" proved="true" >
      <goal name="cmaxpool&#39;vc.62.0.0.0" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.079488" steps="365327"/></proof>
+     <proof prover="3"><result status="valid" time="0.053279" steps="370462"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.62.0.0.1" expl="assertion" proved="true">
-     <proof prover="3"><result status="valid" time="0.009309" steps="17378"/></proof>
+     <proof prover="3"><result status="valid" time="0.008029" steps="16947"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.62.0.0.2" expl="assertion" proved="true">
-     <proof prover="2"><result status="valid" time="0.357529" steps="49092"/></proof>
+     <proof prover="2"><result status="valid" time="0.238442" steps="47499"/></proof>
      </goal>
      <goal name="cmaxpool&#39;vc.62.0.0.3" expl="assertion" proved="true">
-     <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="12.509134" steps="526318"/></proof>
+     <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="4.752796" steps="429901"/></proof>
      </goal>
     </transf>
     </goal>
@@ -686,116 +730,187 @@
   <goal name="cmaxpool&#39;vc.63" expl="assertion" proved="true">
   <transf name="split_vc" proved="true" >
    <goal name="cmaxpool&#39;vc.63.0" expl="assertion" proved="true">
-   <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="8.239068" steps="374301"/></proof>
+   <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="4.798442" steps="324126"/></proof>
    </goal>
   </transf>
   </goal>
   <goal name="cmaxpool&#39;vc.64" expl="assertion" proved="true">
-  <proof prover="3"><result status="valid" time="0.197194" steps="644211"/></proof>
+  <proof prover="3"><result status="valid" time="0.199038" steps="646611"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.65" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.110640" steps="30719"/></proof>
+  <goal name="cmaxpool&#39;vc.65" expl="assertion" proved="true">
+  <proof prover="3"><result status="valid" time="0.058500" steps="333170"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.66" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.232075" steps="671858"/></proof>
+  <goal name="cmaxpool&#39;vc.66" expl="assertion" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="cmaxpool&#39;vc.66.0" expl="assertion" proved="true">
+   <transf name="compute_in_goal" proved="true" >
+    <goal name="cmaxpool&#39;vc.66.0.0" expl="assertion" proved="true">
+    <transf name="split_vc" proved="true" >
+     <goal name="cmaxpool&#39;vc.66.0.0.0" expl="assertion" proved="true">
+     <proof prover="3"><result status="valid" time="0.079488" steps="384146"/></proof>
+     </goal>
+     <goal name="cmaxpool&#39;vc.66.0.0.1" expl="assertion" proved="true">
+     <proof prover="3"><result status="valid" time="0.009309" steps="17641"/></proof>
+     </goal>
+     <goal name="cmaxpool&#39;vc.66.0.0.2" expl="assertion" proved="true">
+     <proof prover="2"><result status="valid" time="0.199142" steps="49492"/></proof>
+     </goal>
+     <goal name="cmaxpool&#39;vc.66.0.0.3" expl="assertion" proved="true">
+     <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="7.394604" steps="524215"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
   </goal>
-  <goal name="cmaxpool&#39;vc.67" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.221219" steps="669648"/></proof>
+  <goal name="cmaxpool&#39;vc.67" expl="assertion" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="cmaxpool&#39;vc.67.0" expl="assertion" proved="true">
+   <proof prover="2" timelimit="30" memlimit="4000"><result status="valid" time="5.662452" steps="375500"/></proof>
+   </goal>
+  </transf>
   </goal>
-  <goal name="cmaxpool&#39;vc.68" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.235329" steps="659244"/></proof>
+  <goal name="cmaxpool&#39;vc.68" expl="assertion" proved="true">
+  <proof prover="3"><result status="valid" time="0.197194" steps="673693"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.69" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.329593" steps="53484"/></proof>
+  <goal name="cmaxpool&#39;vc.69" expl="postcondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.009175" steps="9437"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.70" expl="postcondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.007244" steps="8049"/></proof>
+  <goal name="cmaxpool&#39;vc.70" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.010948" steps="23410"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.71" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.012104" steps="22740"/></proof>
+  <goal name="cmaxpool&#39;vc.71" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.052887" steps="297484"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.72" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.078574" steps="339292"/></proof>
+  <goal name="cmaxpool&#39;vc.72" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.037126" steps="298464"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.73" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.077539" steps="339182"/></proof>
+  <goal name="cmaxpool&#39;vc.73" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.014398" steps="23447"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.74" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.241566" steps="41650"/></proof>
+  <goal name="cmaxpool&#39;vc.74" expl="postcondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.007244" steps="8148"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.75" expl="out of loop bounds" proved="true">
-  <proof prover="3"><result status="valid" time="0.122167" steps="392776"/></proof>
+  <goal name="cmaxpool&#39;vc.75" expl="loop invariant preservation" proved="true">
+  <proof prover="3"><result status="valid" time="0.012104" steps="23091"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.76" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.004493" steps="13307"/></proof>
+  <proof prover="3"><result status="valid" time="0.078574" steps="358307"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.77" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.070509" steps="301976"/></proof>
+  <proof prover="3"><result status="valid" time="0.077539" steps="358197"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.78" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.197515" steps="37592"/></proof>
+  <proof prover="2"><result status="valid" time="0.241566" steps="42251"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.79" expl="out of loop bounds" proved="true">
-  <proof prover="3"><result status="valid" time="0.096911" steps="338563"/></proof>
+  <goal name="cmaxpool&#39;vc.79" expl="loop invariant preservation" proved="true">
+  <proof prover="3"><result status="valid" time="0.004929" steps="15409"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.80" expl="loop invariant preservation" proved="true">
-  <proof prover="2"><result status="valid" time="0.184296" steps="34221"/></proof>
+  <goal name="cmaxpool&#39;vc.80" expl="out of loop bounds" proved="true">
+  <proof prover="3"><result status="valid" time="0.090534" steps="415697"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.81" expl="loop invariant preservation" proved="true">
-  <proof prover="3"><result status="valid" time="0.052605" steps="254360"/></proof>
+  <proof prover="3"><result status="valid" time="0.004493" steps="13588"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.82" expl="assertion" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.82.0" expl="assertion" proved="true">
-   <transf name="inline_goal" proved="true" >
-    <goal name="cmaxpool&#39;vc.82.0.0" expl="assertion" proved="true">
-    <transf name="split_all_full" proved="true" >
-     <goal name="cmaxpool&#39;vc.82.0.0.0" expl="assertion" proved="true">
-     <transf name="split_vc" proved="true" >
-      <goal name="cmaxpool&#39;vc.82.0.0.0.0" expl="assertion" proved="true">
-      <proof prover="2" timelimit="5" memlimit="2000"><result status="valid" time="2.881867" steps="188415"/></proof>
-      </goal>
-     </transf>
-     </goal>
-    </transf>
-    </goal>
-   </transf>
-   </goal>
-  </transf>
+  <goal name="cmaxpool&#39;vc.82" expl="loop invariant preservation" proved="true">
+  <proof prover="3"><result status="valid" time="0.070509" steps="319732"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.83" expl="assertion" proved="true">
-  <transf name="split_vc" proved="true" >
-   <goal name="cmaxpool&#39;vc.83.0" expl="assertion" proved="true">
-   <transf name="inline_goal" proved="true" >
-    <goal name="cmaxpool&#39;vc.83.0.0" expl="assertion" proved="true">
-    <transf name="split_all_full" proved="true" >
-     <goal name="cmaxpool&#39;vc.83.0.0.0" expl="VC for cmaxpool" proved="true">
-     <transf name="split_vc" proved="true" >
-      <goal name="cmaxpool&#39;vc.83.0.0.0.0" expl="VC for cmaxpool" proved="true">
-      <proof prover="2"><result status="valid" time="0.350378" steps="41742"/></proof>
-      </goal>
-     </transf>
-     </goal>
-     <goal name="cmaxpool&#39;vc.83.0.0.1" expl="VC for cmaxpool" proved="true">
-     <transf name="split_vc" proved="true" >
-      <goal name="cmaxpool&#39;vc.83.0.0.1.0" expl="VC for cmaxpool" proved="true">
-      <proof prover="0"><result status="valid" time="12.176319" steps="1204060"/></proof>
-      </goal>
-     </transf>
-     </goal>
-    </transf>
-    </goal>
-   </transf>
-   </goal>
-  </transf>
+  <goal name="cmaxpool&#39;vc.83" expl="loop invariant preservation" proved="true">
+  <proof prover="2"><result status="valid" time="0.197515" steps="38225"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.84" expl="postcondition" proved="true">
-  <proof prover="3"><result status="valid" time="0.056049" steps="281476"/></proof>
+  <goal name="cmaxpool&#39;vc.84" expl="loop invariant preservation" proved="true">
+  <proof prover="3"><result status="valid" time="0.006766" steps="14075"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.85" expl="out of loop bounds" proved="true">
-  <proof prover="3"><result status="valid" time="0.047283" steps="237928"/></proof>
+  <proof prover="3"><result status="valid" time="0.096911" steps="359716"/></proof>
   </goal>
-  <goal name="cmaxpool&#39;vc.86" expl="postcondition" proved="true">
+  <goal name="cmaxpool&#39;vc.86" expl="loop invariant preservation" proved="true">
+  <proof prover="2"><result status="valid" time="0.184296" steps="34817"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.87" expl="loop invariant preservation" proved="true">
+  <proof prover="2" obsolete="true"><result status="valid" time="0.329593" steps="53484"/></proof>
+  <proof prover="3"><result status="valid" time="0.007138" steps="12866"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.88" expl="out of loop bounds" proved="true">
+  <proof prover="3"><result status="valid" time="0.122167" steps="318705"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.89" expl="assertion" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="cmaxpool&#39;vc.89.0" expl="assertion" proved="true">
+   <transf name="inline_goal" proved="true" >
+    <goal name="cmaxpool&#39;vc.89.0.0" expl="assertion" proved="true">
+    <transf name="split_all_full" proved="true" >
+     <goal name="cmaxpool&#39;vc.89.0.0.0" expl="assertion" proved="true">
+     <transf name="split_vc" proved="true" >
+      <goal name="cmaxpool&#39;vc.89.0.0.0.0" expl="assertion" proved="true">
+      <proof prover="2"><result status="valid" time="1.952874" steps="189009"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="cmaxpool&#39;vc.90" expl="assertion" proved="true">
+  <transf name="split_vc" proved="true" >
+   <goal name="cmaxpool&#39;vc.90.0" expl="assertion" proved="true">
+   <transf name="inline_goal" proved="true" >
+    <goal name="cmaxpool&#39;vc.90.0.0" expl="assertion" proved="true">
+    <transf name="split_all_full" proved="true" >
+     <goal name="cmaxpool&#39;vc.90.0.0.0" expl="VC for cmaxpool" proved="true">
+     <transf name="split_vc" proved="true" >
+      <goal name="cmaxpool&#39;vc.90.0.0.0.0" expl="VC for cmaxpool" proved="true">
+      <proof prover="2"><result status="valid" time="0.350378" steps="42299"/></proof>
+      </goal>
+     </transf>
+     </goal>
+     <goal name="cmaxpool&#39;vc.90.0.0.1" expl="VC for cmaxpool" proved="true">
+     <transf name="split_vc" proved="true" >
+      <goal name="cmaxpool&#39;vc.90.0.0.1.0" expl="VC for cmaxpool" proved="true">
+      <proof prover="0"><result status="valid" time="10.128182" steps="1313149"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="cmaxpool&#39;vc.91" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004047" steps="18004"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.92" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.035798" steps="226151"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.93" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.031462" steps="227077"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.94" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.000001" steps="18053"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.95" expl="postcondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.056049" steps="297343"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.96" expl="out of loop bounds" proved="true">
+  <proof prover="3"><result status="valid" time="0.047283" steps="237988"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.97" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003331" steps="9449"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.98" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003960" steps="9458"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.99" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.003690" steps="9467"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.100" expl="precondition" proved="true">
+  <proof prover="3"><result status="valid" time="0.004759" steps="9474"/></proof>
+  </goal>
+  <goal name="cmaxpool&#39;vc.101" expl="postcondition" proved="true">
   <proof prover="3"><result status="valid" time="0.009307" steps="5141"/></proof>
   </goal>
  </transf>
