@@ -237,7 +237,6 @@
   <proof prover="3"><result status="valid" time="0.027192" steps="122630"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.3" expl="integer overflow" proved="true">
-  <proof prover="1" obsolete="true"><result status="valid" time="0.096059" steps="9198"/></proof>
   <proof prover="3"><result status="valid" time="0.017277" steps="123014"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.4" expl="integer overflow" proved="true">
@@ -256,7 +255,6 @@
   <proof prover="1"><result status="valid" time="0.388339" steps="11497"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.9" expl="integer overflow" proved="true">
-  <proof prover="2" obsolete="true"><result status="valid" time="0.053102" steps="13513"/></proof>
   <proof prover="3"><result status="valid" time="0.020453" steps="145334"/></proof>
   </goal>
   <goal name="w_cools_calculate&#39;vc.10" expl="integer overflow" proved="true">
@@ -460,7 +458,6 @@
   <proof prover="3"><result status="valid" time="0.008961" steps="10657"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.8" expl="loop invariant init" proved="true">
-  <proof prover="2" obsolete="true"><result status="valid" time="0.110640" steps="30719"/></proof>
   <proof prover="3"><result status="valid" time="0.047081" steps="215308"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.9" expl="precondition" proved="true">
@@ -829,7 +826,6 @@
   <proof prover="2"><result status="valid" time="0.184296" steps="34817"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.87" expl="loop invariant preservation" proved="true">
-  <proof prover="2" obsolete="true"><result status="valid" time="0.329593" steps="53484"/></proof>
   <proof prover="3"><result status="valid" time="0.007138" steps="12866"/></proof>
   </goal>
   <goal name="cmaxpool&#39;vc.88" expl="out of loop bounds" proved="true">
